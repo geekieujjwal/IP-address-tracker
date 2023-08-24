@@ -80,10 +80,6 @@ label {
   background-color: white;
 }
 
-.hide {
-  display: none;
-}
-
 .ipAddress,
 .location,
 .timezone,
@@ -139,7 +135,7 @@ label {
     height: 64vh;
   }
   .location-details {
-    display: block;
+    flex-direction: column;
     border-radius: 1rem;
     min-width: 20rem;
   }
@@ -201,4 +197,8 @@ label {
   .location-details {
     transform: translate(-50%, -40%);
   }
+}
+
+.hide {
+  display: none;
 }
