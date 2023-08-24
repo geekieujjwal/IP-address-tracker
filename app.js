@@ -2,7 +2,7 @@
 const input = document.getElementById("search-inp");
 const ipAddress = document.getElementById("ipAddress");
 const locationID = document.getElementById("locationID");
-const timezone = document.getElementById("timezone");
+const timezoneDiv = document.getElementById("timezone");
 const isp = document.getElementById("isp");
 const submitBtn = document.getElementById("submit-btn");
 const locationDetails = document.querySelector(".location-details");
@@ -73,7 +73,7 @@ async function fetchData() {
       // Update displayed information
       ipAddress.textContent = input.value;
       locationID.textContent = `${city}, ${country} ${postalCode}`;
-      timezone.textContent = timezone;
+      timezoneDiv.textContent = timezone;
       isp.textContent = data.isp;
       //Making location details field visible
       locationDetails.classList.remove("hide");
