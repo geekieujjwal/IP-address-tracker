@@ -10,6 +10,8 @@
 header {
   background-image: url(/images/pattern-bg-desktop.png);
   height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
@@ -49,6 +51,7 @@ label {
   width: 40%;
   font-size: 1rem;
   outline: none;
+  cursor: pointer;
 }
 
 #search-bar #submit-btn {
@@ -71,6 +74,14 @@ label {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.75);
+  background-color: white;
+}
+
+.hide {
+  display: none;
 }
 
 .ipAddress,
@@ -84,7 +95,7 @@ label {
   justify-content: flex-start;
   min-width: 12rem;
   max-width: 20rem;
-  height: 15vh;
+  min-height: 16vh;
   overflow-wrap: anywhere;
 }
 
@@ -120,12 +131,74 @@ label {
   padding: 0rem 1rem 1rem;
 }
 
-.ipAddress {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+@media screen and (max-width: 795px) {
+  header {
+    height: 36vh;
+  }
+  #map {
+    height: 64vh;
+  }
+  .location-details {
+    display: block;
+    border-radius: 1rem;
+    min-width: 20rem;
+  }
+  .ipAddress,
+  .location,
+  .timezone,
+  .isp {
+    align-items: center;
+    justify-content: center;
+    min-height: 0rem;
+    min-width: 0rem;
+  }
+  .location-details h3 {
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .isp h3 {
+    padding-bottom: 1rem;
+  }
+  .location-details p {
+    padding: 1rem;
+  }
+  .line {
+    display: none;
+  }
 }
 
-.isp {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+@media screen and (max-width: 415px) {
+  .location-details h3 {
+    font-size: 1rem;
+  }
+  #search-bar input {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #search-bar input {
+    width: 80%;
+  }
+
+  .location-details {
+    min-width: 16.5rem;
+    z-index: 10000;
+  }
+  .location-details p {
+    padding: 0.7rem 0 0.5rem;
+  }
+
+  .location-details h3 {
+    font-size: 0.7rem;
+  }
+  label {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .location-details {
+    transform: translate(-50%, -40%);
+  }
 }

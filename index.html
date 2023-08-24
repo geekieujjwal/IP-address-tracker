@@ -19,42 +19,49 @@
   </head>
   <body>
     <header>
+      <!-- Header label for the IP Address Tracker -->
       <label for="search-inp">IP Address Tracker</label>
       <div id="search-bar">
+        <!-- Input field for IP address search -->
         <input
           id="search-inp"
           type="text"
-          placeholder="Search for any IP address or domain"
+          placeholder="Search for any IP address..."
         />
+        <!-- Submit button -->
         <div id="submit-btn">></div>
       </div>
     </header>
     <main>
       <div class="location-details">
+        <!-- IP Address section -->
         <div class="ipAddress">
           <p>ip address</p>
           <h3 id="ipAddress">103.37.80.38</h3>
         </div>
         <div class="line"><p></p></div>
+        <!-- Location section -->
         <div class="location">
           <p>location</p>
           <h3 id="locationID">Dehra Dun, IN 248001</h3>
         </div>
         <div class="line"><p></p></div>
-
+        <!-- Timezone section -->
         <div class="timezone">
           <p>timezone</p>
           <h3 id="timezone">+05:30</h3>
         </div>
         <div class="line"><p></p></div>
-
+        <!-- ISP section -->
         <div class="isp">
           <p>isp</p>
           <h3 id="isp">Dehradun Enet Solutions Private Ltd</h3>
         </div>
       </div>
-      <div id="map" style="height: 72.7vh"></div>
+      <!-- Map section -->
+      <div id="map" style="height: 70vh"></div>
     </main>
+    <!-- JavaScript file for handling the interactive functionality -->
     <script src="/app.js"></script>
   </body>
 </html>
